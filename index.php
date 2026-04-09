@@ -23,7 +23,10 @@
 // echo "<pre>";
 
 
-sprintf("Ad: %s,Soyad:  %s, Yas:%d", "Ali","Veli",30);
+// sprintf("Ad: %s,Soyad:  %s, Yas:%d", "Ali","Veli",30);
+
+
+file_put_contents('test.text' , "Hello World");
 
 ?>
 
