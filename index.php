@@ -12,15 +12,18 @@
 <?php
 
 
-echo "<pre>";
-print_r(
-    [
-        'ad' => 'Ali',
-        'soyad' => 'Veli',
-        'yas' => 30
-    ]
-);
-echo "<pre>";
+// echo "<pre>";
+// print_r(
+//     [
+//         'ad' => 'Ali',
+//         'soyad' => 'Veli',
+//         'yas' => 30
+//     ]
+// );
+// echo "<pre>";
+
+
+sprintf("Ad: %s,Soyad:  %s, Yas:%d", "Ali","Veli",30);
 
 ?>
 
