@@ -161,18 +161,55 @@
 
     // və (AND) operatoru, hər iki dəyər true olarsa true, digər hallarda false qaytarır
 // və ya (OR) operatoru, hər iki dəyər false olarsa false, digər hallarda true qaytarır
-// deyil (NOT) operatoru, dəyər true-dursa false, false-dursa true qaytarır
+// // deyil (NOT) operatoru, dəyər true-dursa false, false-dursa true qaytarır
 
-    $result15=(true && false);
-    $result15=(true || false);
-    $result15=(!true);
+//     $result15=(true && false);
+//     $result15=(true || false);
+//     $result15=(!true);
 
-    $x = 5;
-       $x += 1;  // $x dəyərini 1 artırır, $x = 6 olur
-       $x++;     // $x dəyərini 1 artırır, $x = 7 olur
+//     $x = 5;
+//        $x += 1;  // $x dəyərini 1 artırır, $x = 6 olur
+//        $x++;     // $x dəyərini 1 artırır, $x = 7 olur
+
+//    BITWISE OPERATORLAR
+
+// $result18 = (5 & 3);   // bitwise AND operatoru, hər iki bit 1 olarsa 1, digər hallarda 0 qaytarır
+// $result19 = (5 | 3);   // bitwise OR operatoru, bitlərdən biri 1 olarsa 1 qaytarır
+// $result20 = (5 ^ 3);   // bitwise XOR operatoru, bitlər fərqlidirsə 1, eynidirsə 0 qaytarır
+// $result21 = (~5);      // bitwise NOT operatoru, bitləri tərsinə çevirir (1 → 0, 0 → 1)
+// $result22 = (5 << 1);  // bitwise left shift operatoru, bitləri sola sürüşdürür, sona 0 əlavə edir
+// $result23 = (5 >> 1);  // bitwise right shift operatoru, bitləri sağa sürüşdürür
+
+$result24 = "Hello" . " " . "World!";  // string birləşdirmə (concat) operatoru, iki stringi birləşdirir
 
 
-    
+$age = 20;
+// ternary operatoru, şərtə görə dəyər qaytarır
+$result25 = ($age > 18) ? "Yasiniz 18-dən böyük" : "Yasiniz 18-dən kiçik";
+
+$result26 = $undefinedVariable ?? "degisken tanimlanmamis";
+
+// Operand
+// operator
+   
+    $name=null;
+
+    $defaultName ="Turkan Hemideni incidir";
+
+    $result26=$name ?? $defaultName;
+    echo $result26;
+
+
+
+// goto
+
+    echo "Ilk setrin baslangici <br>";
+    goto skip;
+
+    echo "bu setr adlanacaq";
+
+    skip:
+    echo "son setr yazdirilacaqdir";
 
 
 
