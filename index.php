@@ -84,20 +84,40 @@
 
 // arraya ozumzude deyer teyin ede bilirik proqram da deyer teyin ede bilir
 
-    $var1=6;
-    $var2=3.14;
-    $var3=true;
-    $var4='Ali';
-    $var5=[];
+    // $var1=6;
+    // $var2=3.14;
+    // $var3=true;
+    // $var4='Ali';
+    // $var5=[];
 
-    echo gettype($var1) . "<br>";
-    echo gettype($var2) . "<br>";
-    echo gettype($var3) . "<br>";
-    echo gettype($var4) . "<br>";
-    echo gettype($var5) . "<br>";
+    // echo gettype($var1) . "<br>";
+    // echo gettype($var2) . "<br>";
+    // echo gettype($var3) . "<br>";
+    // echo gettype($var4) . "<br>";
+    // echo gettype($var5) . "<br>";
 
 
-    
+    //    OPEARTORLAR
+    // toplama
+   $result1 =5+3;  
+
+//    cixma
+   $result2 =5-3;
+
+//    vurma
+   $result3 =5*3;
+
+//    bolme
+   $result4 =5/3;
+
+//    qaliqli bolme
+   $result5 =5%3;
+
+   print ("Toplama:" . $result1 . "<br>");
+   print ("Cixma:" . $result2 . "<br>");
+   print ("Vurma:" . $result3 . "<br>");
+   print ("Bolme:" .  $result4 . "<br>");
+   print ("Mod:" .  $result5 . "<br>");
 
 
 
