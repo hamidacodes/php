@@ -218,6 +218,40 @@
 
         // $ad2='Hemide';
 
+//        $bir=5;
+//        $iki=&$bir;
+//        $iki=10;
+
+
+//        echo $bir . "<br>";
+//        echo $iki . "<br>";
+
+//        $number1=5;
+
+//     if($number1 > 10){
+//         echo "Reqem 10-dan boyukdur";
+//     }
+
+//     $number1=5;
+
+//     if ($number1 > 10) {
+//     echo "Reqem 10-dan boyukdur";
+// } elseif ($number1 == 10) {
+//     if ($number1 % 2 == 0) {
+//         echo "Reqem 10-dur ve cutdur";
+//     } else {
+//         echo "Reqem 10-dur ve tekdir";
+//     }
+// } else {
+//     echo "Reqem 10-dan kicikdir";
+// }
+
+//  &-referans operatoru-bir deyiseninn referansini basqa bir deyisene teyin etmeye imkan verir 
+
+        // $ad='Turkan';
+
+        // $ad2='Hemide';
+
        $bir=5;
        $iki=&$bir;
        $iki=10;
@@ -225,6 +259,7 @@
 
        echo $bir . "<br>";
        echo $iki . "<br>";
+
 
        $number1=5;
 
@@ -246,6 +281,7 @@
     echo "Reqem 10-dan kicikdir";
 }
 
+
 <?php         $sert=6; if ($sert ==5):         ?>
 
        <h1>Birinci sert yerine yetirildi</h1>
@@ -261,7 +297,6 @@
         <h1>Hecbir sert yerine yetirilmedi</h1>  
 
      <?php       endif; ?>
-     
 
      ?php  $loggedIn = true;?>
 
@@ -278,6 +313,14 @@
 <?php else: ?>
     <p>Zehmet olmasa daxil olun!</p>
 <?php endif; ?>
+
+
+
+
+
+
+
+
 
 
 
