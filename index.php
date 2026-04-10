@@ -28,61 +28,73 @@
 
 // file_put_contents('test.text' , "Hello World");
 
-  $name="Ali";
-      $age=20;
-      $isActive=true;
-      $balance=100.50;
-      $x=null;
+//   $name="Ali";
+//       $age=20;
+//       $isActive=true;
+//       $balance=100.50;
+//       $x=null;
      
-    $var1=$var2=$var3= "Hello World";  
+//     $var1=$var2=$var3= "Hello World";  
 
-    // birden cox deyisken qebul ede bilir
+//     // birden cox deyisken qebul ede bilir
        
 
 
-    $name="Ali";
-    $name="Veli";     
+//     $name="Ali";
+//     $name="Veli";     
 
-    echo $name;
+//     echo $name;
 
-    // const - kodda deyismez demekdir.const -la teyin edilen deyeri deyismek mumkun deyil
+//     // const - kodda deyismez demekdir.const -la teyin edilen deyeri deyismek mumkun deyil
  
-     const PI=3.14;
+//      const PI=3.14;
 
-     echo PI;
+//      echo PI;
 
-     // const hem global hem class icinde istifade edilir ancaq funksiya icinde istifade edilmez
-    // define() hem global hemde funskiya icinde istifade edilir ancaq class icinde istifade edile bilmez
+//      // const hem global hem class icinde istifade edilir ancaq funksiya icinde istifade edilmez
+//     // define() hem global hemde funskiya icinde istifade edilir ancaq class icinde istifade edile bilmez
      
-    define("PI",3.14);
-    echo PI;
+//     define("PI",3.14);
+//     echo PI;
 
-    // tek dirnaq icersine degiskenler yazila bilmez,\n ise yeni setr simvoludur
+//     // tek dirnaq icersine degiskenler yazila bilmez,\n ise yeni setr simvoludur
 
-    $metn1='Bob';
-    echo 'Salam $metn1\n'
+//     $metn1='Bob';
+//     echo 'Salam $metn1\n'
 
-    // cut dirnaq icersinde degiskenler yazila biler \n ise yeni setir simvoludur
-    $metn2="Bob";
-    echo "Salam $metn1\n";
+//     // cut dirnaq icersinde degiskenler yazila biler \n ise yeni setir simvoludur
+//     $metn2="Bob";
+//     echo "Salam $metn1\n";
 
-    // EOL-heredok cox setrli metnler ucun istifade olunur alt alt metnleri ekrana cap etmek ucun istifade olunur
+//     // EOL-heredok cox setrli metnler ucun istifade olunur alt alt metnleri ekrana cap etmek ucun istifade olunur
 
-    $metn2='Bob';
+//     $metn2='Bob';
 
-    $ekranaYazdir = <<<EOL
-    Salam $metn2 sdhfosif
-    fdsojabgfdl
-    segahkrjdsf'
-    sdagfvnakas
-    fashvfslkdf
-    sdvjadf;
-    EOL;
+//     $ekranaYazdir = <<<EOL
+//     Salam $metn2 sdhfosif
+//     fdsojabgfdl
+//     segahkrjdsf'
+//     sdagfvnakas
+//     fashvfslkdf
+//     sdvjadf;
+//     EOL;
 
-    echo $ekranaYazdir;
+//     echo $ekranaYazdir;
 
 
+// arraya ozumzude deyer teyin ede bilirik proqram da deyer teyin ede bilir
 
+    $var1=6;
+    $var2=3.14;
+    $var3=true;
+    $var4='Ali';
+    $var5=[];
+
+    echo gettype($var1) . "<br>";
+    echo gettype($var2) . "<br>";
+    echo gettype($var3) . "<br>";
+    echo gettype($var4) . "<br>";
+    echo gettype($var5) . "<br>";
 
 
     
