@@ -134,16 +134,46 @@
 // $result14  // spaceship operatoru, əgər dəyərlər bərabərdirsə 0 qaytarır,birinci dəyər ikinci dəyərdən böyükdürsə 1 qaytarır,birinci dəyər ikinci dəyərdən kiçikdirsə -1 qaytarır
 
 
-     $result6 =(5 == 5);
-     $result7 =(5 === "5");
-     $result8 =(5 != 3);
-     $result9 =(5 !== "5");
-     $result10 =(5 > 3);
-     $result11 =(5 < 3);
-     $result12 =(5 >= 5);
-     $result13 =(5 <= 3);
+    //  $result6 =(5 == 5);
+    //  $result7 =(5 === "5");
+    //  $result8 =(5 != 3);
+    //  $result9 =(5 !== "5");
+    //  $result10 =(5 > 3);
+    //  $result11 =(5 < 3);
+    //  $result12 =(5 >= 5);
+    //  $result13 =(5 <= 3);
 
-      $result14 =(5 <=> 3);
+    //   $result14 =(5 <=> 3);
+
+
+    //   print($result6 . "<br>");
+    //   print($result7 . "<br>");
+    //   print($result8 . "<br>");
+    //   print($result9 . "<br>");
+    //   print($result10 . "<br>");
+    //   print($result11 . "<br>");
+    //   print($result12 . "<br>");
+    //   print($result13 . "<br>");
+    //   print($result14 . "<br>");
+
+
+
+
+    // və (AND) operatoru, hər iki dəyər true olarsa true, digər hallarda false qaytarır
+// və ya (OR) operatoru, hər iki dəyər false olarsa false, digər hallarda true qaytarır
+// deyil (NOT) operatoru, dəyər true-dursa false, false-dursa true qaytarır
+
+    $result15=(true && false);
+    $result15=(true || false);
+    $result15=(!true);
+
+    $x = 5;
+       $x += 1;  // $x dəyərini 1 artırır, $x = 6 olur
+       $x++;     // $x dəyərini 1 artırır, $x = 7 olur
+
+
+    
+
 
 
 
