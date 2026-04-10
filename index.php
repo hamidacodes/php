@@ -180,36 +180,107 @@
 // $result22 = (5 << 1);  // bitwise left shift operatoru, bitləri sola sürüşdürür, sona 0 əlavə edir
 // $result23 = (5 >> 1);  // bitwise right shift operatoru, bitləri sağa sürüşdürür
 
-$result24 = "Hello" . " " . "World!";  // string birləşdirmə (concat) operatoru, iki stringi birləşdirir
+// $result24 = "Hello" . " " . "World!";  // string birləşdirmə (concat) operatoru, iki stringi birləşdirir
 
 
-$age = 20;
-// ternary operatoru, şərtə görə dəyər qaytarır
-$result25 = ($age > 18) ? "Yasiniz 18-dən böyük" : "Yasiniz 18-dən kiçik";
+// $age = 20;
+// // ternary operatoru, şərtə görə dəyər qaytarır
+// $result25 = ($age > 18) ? "Yasiniz 18-dən böyük" : "Yasiniz 18-dən kiçik";
 
-$result26 = $undefinedVariable ?? "degisken tanimlanmamis";
+// $result26 = $undefinedVariable ?? "degisken tanimlanmamis";
 
-// Operand
-// operator
+// // Operand
+// // operator
    
-    $name=null;
+//     $name=null;
 
-    $defaultName ="Turkan Hemideni incidir";
+//     $defaultName ="Turkan Hemideni incidir";
 
-    $result26=$name ?? $defaultName;
-    echo $result26;
+//     $result26=$name ?? $defaultName;
+//     echo $result26;
 
 
 
-// goto
+// // goto
 
-    echo "Ilk setrin baslangici <br>";
-    goto skip;
+//     echo "Ilk setrin baslangici <br>";
+//     goto skip;
 
-    echo "bu setr adlanacaq";
+//     echo "bu setr adlanacaq";
 
-    skip:
-    echo "son setr yazdirilacaqdir";
+//     skip:
+//     echo "son setr yazdirilacaqdir";
+
+
+//  &-referans operatoru-bir deyiseninn referansini basqa bir deyisene teyin etmeye imkan verir 
+
+        // $ad='Turkan';
+
+        // $ad2='Hemide';
+
+       $bir=5;
+       $iki=&$bir;
+       $iki=10;
+
+
+       echo $bir . "<br>";
+       echo $iki . "<br>";
+
+       $number1=5;
+
+    if($number1 > 10){
+        echo "Reqem 10-dan boyukdur";
+    }
+
+    $number1=5;
+
+    if ($number1 > 10) {
+    echo "Reqem 10-dan boyukdur";
+} elseif ($number1 == 10) {
+    if ($number1 % 2 == 0) {
+        echo "Reqem 10-dur ve cutdur";
+    } else {
+        echo "Reqem 10-dur ve tekdir";
+    }
+} else {
+    echo "Reqem 10-dan kicikdir";
+}
+
+<?php         $sert=6; if ($sert ==5):         ?>
+
+       <h1>Birinci sert yerine yetirildi</h1>
+
+
+   <?php      elseif ($sert>5):        ?> 
+
+        <h1>Ikinci sert yerine yetirildi</h1>   
+
+
+    <?php       else:                     ?> 
+
+        <h1>Hecbir sert yerine yetirilmedi</h1>  
+
+     <?php       endif; ?>
+     
+
+     ?php  $loggedIn = true;?>
+
+<?php if ($loggedIn == true): ?>
+    <p>Hesabiniza xoş gəlmisiniz</p>
+<?php else: ?>
+    <p>Zehmet olmasa daxil olun!</p>
+<?php endif; ?>
+
+<?php  $loggedIn = false;?>
+
+<?php if ($loggedIn): ?>
+    <p>Hesabiniza xoş gəlmisiniz</p>
+<?php else: ?>
+    <p>Zehmet olmasa daxil olun!</p>
+<?php endif; ?>
+
+
+
 
 
 
