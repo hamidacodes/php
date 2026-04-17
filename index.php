@@ -276,18 +276,18 @@
 
 //  is_ funksiyalari-php-de mueyyen bir tipin ollub olmadigini yoxlamaq ucun is ile baslayan funksiyalar var.
 
-     $var1 = 5;
-$var2 = "Hello world";
-$var3 = [];
+//      $var1 = 5;
+// $var2 = "Hello world";
+// $var3 = [];
 
-echo is_int($var1) ? "Integer" : "Not Integer";
-echo "<br>";
+// echo is_int($var1) ? "Integer" : "Not Integer";
+// echo "<br>";
 
-echo is_string($var2) ? "String" : "Not String";
-echo "<br>";
+// echo is_string($var2) ? "String" : "Not String";
+// echo "<br>";
 
-echo is_array($var3) ? "Array" : "Not Array";
-echo "<br>";
+// echo is_array($var3) ? "Array" : "Not Array";
+// echo "<br>";
 
 
 // is_int($var) → tamədəd
@@ -317,6 +317,12 @@ echo "<br>";
     // cURL (http sorgulari ucun istifade olunur)
     // sql query resurslari
     // reskil resurslari
+
+
+    for($i=5, $j=0;   $i>0,$j<5;   $i--,$j++){
+
+    echo "$i - $j <br>";
+  }
 
 
   
