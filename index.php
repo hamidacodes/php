@@ -325,36 +325,43 @@
 //   }
 
 
-  $fruits=[
-       "ad1"=>"Elcin",
-       "ad2"=>"Leyla",
+//   $fruits=[
+//        "ad1"=>"Elcin",
+//        "ad2"=>"Leyla",
     
-    ];
+//     ];
    
-  foreach($fruits as $key => $value) {
-    echo $key . "=>" .$value . "<br>";
-  }
+//   foreach($fruits as $key => $value) {
+//     echo $key . "=>" .$value . "<br>";
+//   }
 
 
-  $fruits=[
-       "Auto"=>['dodge','mercedes','audi','bmw'],
-       "Samalyot"=>['boeing','airbus','embraer'],
-       "Gemi"=>['titanic','queen mary','ever given'],
+//   $fruits=[
+//        "Auto"=>['dodge','mercedes','audi','bmw'],
+//        "Samalyot"=>['boeing','airbus','embraer'],
+//        "Gemi"=>['titanic','queen mary','ever given'],
     
-    ];
+//     ];
    
-  foreach($fruits as $key => $arrays) {
-       echo "<b> $key </b>";
+//   foreach($fruits as $key => $arrays) {
+//        echo "<b> $key </b>";
 
-   foreach($arrays as $value) {
-       echo "<li>$value</li>";
-   }
+//    foreach($arrays as $value) {
+//        echo "<li>$value</li>";
+//    }
 
-   echo "<br>";
+//    echo "<br>";
 
 
+//   }
+
+
+$i=0;
+      while(    $i<10   ){
+       echo "$i <br>";
+
+       $i++;
   }
-
 
 
   
