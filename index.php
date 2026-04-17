@@ -275,15 +275,19 @@
     
 
 //  is_ funksiyalari-php-de mueyyen bir tipin ollub olmadigini yoxlamaq ucun is ile baslayan funksiyalar var.
-     $var1=5;
-     $var2="Hello world";
-     $var3=[];
 
-     echo is_init($var)? "Integer":"Not Integer";
-     echo "<br>"
-     echo is_string($var2)? "String" : "Not String";
-     echo "<br>"
-     echo is_array($var2)? "Array" : "Not Array";
+     $var1 = 5;
+$var2 = "Hello world";
+$var3 = [];
+
+echo is_int($var1) ? "Integer" : "Not Integer";
+echo "<br>";
+
+echo is_string($var2) ? "String" : "Not String";
+echo "<br>";
+
+echo is_array($var3) ? "Array" : "Not Array";
+echo "<br>";
 
 
 // is_int($var) → tamədəd
@@ -297,16 +301,15 @@
 
 
 
-    is_int($var);  
-    is_string($var);
-    is_array($var);
-    is_bool($var);
-    is_float($var);
-    is_double($var);
-    is_null($var);
-    is_object($var);
-
-    is_resource($var);
+    // is_int($var1);  
+    // is_string($var2);
+    // is_array($var3);
+    // is_bool($var1);
+    // is_float($var2);
+    // is_double($var3);
+    // is_null($var1);
+    // is_object($var2);
+    // is_resource($var3);
 
     // fayl resurslari
     // verilenler bazasi elaqeleri
@@ -345,7 +348,7 @@
 
 ?>
 
-// <!-- <script>
+<!-- // <script>
 // let a = {
 //     'ad': 'Ali'
 //     'soyad': 'Veli'
