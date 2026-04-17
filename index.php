@@ -218,9 +218,9 @@
 
         // $ad2='Hemide';
 
-//        $bir=5;
-//        $iki=&$bir;
-//        $iki=10;
+    //    $bir=5;
+    //    $iki=&$bir;
+    //    $iki=10;
 
 
 //        echo $bir . "<br>";
@@ -246,74 +246,77 @@
 //     echo "Reqem 10-dan kicikdir";
 // }
 
-//  &-referans operatoru-bir deyiseninn referansini basqa bir deyisene teyin etmeye imkan verir 
-
-        // $ad='Turkan';
-
-        // $ad2='Hemide';
-
-       $bir=5;
-       $iki=&$bir;
-       $iki=10;
 
 
-       echo $bir . "<br>";
-       echo $iki . "<br>";
+// <!-- assosativ -->
+//   <!-- array[] -->
+//    <!-- [] -->
+    
+//     <?php  
+//         indexli array tanimlama
+//       $fruits=['alma','armud','heyva',['qarpiz','kavun','nar' ,5,true]];
+
+//     print_r($fruits[3]) . "<br>";
+
+    
+// $user = [
+//     'ad' => 'Ali',
+//     'soyad' => 'Veli',
+//     'yas' => 30,
+//     'adres' => [
+//         'seher' => 'Baki',
+//         'kuce' => 'Nizami',
+//         'evNo' => 10
+//     ]
+// ];
+
+// echo $user['adres']['seher'] . "<br>"; 
+    
+    
+
+//  is_ funksiyalari-php-de mueyyen bir tipin ollub olmadigini yoxlamaq ucun is ile baslayan funksiyalar var.
+     $var1=5;
+     $var2="Hello world";
+     $var3=[];
+
+     echo is_init($var)? "Integer":"Not Integer";
+     echo "<br>"
+     echo is_string($var2)? "String" : "Not String";
+     echo "<br>"
+     echo is_array($var2)? "Array" : "Not Array";
 
 
-       $number1=5;
-
-    if($number1 > 10){
-        echo "Reqem 10-dan boyukdur";
-    }
-
-    $number1=5;
-
-    if ($number1 > 10) {
-    echo "Reqem 10-dan boyukdur";
-} elseif ($number1 == 10) {
-    if ($number1 % 2 == 0) {
-        echo "Reqem 10-dur ve cutdur";
-    } else {
-        echo "Reqem 10-dur ve tekdir";
-    }
-} else {
-    echo "Reqem 10-dan kicikdir";
-}
+// is_int($var) → tamədəd
+// is_string($var) → mətn
+// is_array($var) → massiv
+// is_bool($var) → true,false
+// is_float($var) → kesr ededi
+// is_double($var) → kesr ededi
+// is_null($var) → boş
+// is_object($var) → obyekt
 
 
-<?php         $sert=6; if ($sert ==5):         ?>
 
-       <h1>Birinci sert yerine yetirildi</h1>
+    is_int($var);  
+    is_string($var);
+    is_array($var);
+    is_bool($var);
+    is_float($var);
+    is_double($var);
+    is_null($var);
+    is_object($var);
+
+    is_resource($var);
+
+    // fayl resurslari
+    // verilenler bazasi elaqeleri
+    // sebeke elaqeleri    // 
+    // cURL (http sorgulari ucun istifade olunur)
+    // sql query resurslari
+    // reskil resurslari
 
 
-   <?php      elseif ($sert>5):        ?> 
-
-        <h1>Ikinci sert yerine yetirildi</h1>   
-
-
-    <?php       else:                     ?> 
-
-        <h1>Hecbir sert yerine yetirilmedi</h1>  
-
-     <?php       endif; ?>
-
-     ?php  $loggedIn = true;?>
-
-<?php if ($loggedIn == true): ?>
-    <p>Hesabiniza xoş gəlmisiniz</p>
-<?php else: ?>
-    <p>Zehmet olmasa daxil olun!</p>
-<?php endif; ?>
-
-<?php  $loggedIn = false;?>
-
-<?php if ($loggedIn): ?>
-    <p>Hesabiniza xoş gəlmisiniz</p>
-<?php else: ?>
-    <p>Zehmet olmasa daxil olun!</p>
-<?php endif; ?>
-
+  
 
 
 
@@ -342,13 +345,13 @@
 
 ?>
 
-<!-- <script>
-let a = {
-    'ad': 'Ali'
-    'soyad': 'Veli'
-    'yas': 30
-}
-</script> -->
+// <!-- <script>
+// let a = {
+//     'ad': 'Ali'
+//     'soyad': 'Veli'
+//     'yas': 30
+// }
+// </script> -->
 
 </body>
 </html>
