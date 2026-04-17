@@ -319,10 +319,42 @@
     // reskil resurslari
 
 
-    for($i=5, $j=0;   $i>0,$j<5;   $i--,$j++){
+//     for($i=5, $j=0;   $i>0,$j<5;   $i--,$j++){
 
-    echo "$i - $j <br>";
+//     echo "$i - $j <br>";
+//   }
+
+
+  $fruits=[
+       "ad1"=>"Elcin",
+       "ad2"=>"Leyla",
+    
+    ];
+   
+  foreach($fruits as $key => $value) {
+    echo $key . "=>" .$value . "<br>";
   }
+
+
+  $fruits=[
+       "Auto"=>['dodge','mercedes','audi','bmw'],
+       "Samalyot"=>['boeing','airbus','embraer'],
+       "Gemi"=>['titanic','queen mary','ever given'],
+    
+    ];
+   
+  foreach($fruits as $key => $arrays) {
+       echo "<b> $key </b>";
+
+   foreach($arrays as $value) {
+       echo "<li>$value</li>";
+   }
+
+   echo "<br>";
+
+
+  }
+
 
 
   
