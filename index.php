@@ -74,14 +74,21 @@
 
 
         // ...
-    function ureyinIstiyenQeder(...$items){
-        foreach($items as $item){
-            echo $item . "<br>";
-        }
-    }
+    // function ureyinIstiyenQeder(...$items){
+    //     foreach($items as $item){
+    //         echo $item . "<br>";
+    //     }
+    // }
 
-    ureyinIstiyenQeder("armud","banana","portaqal","ciyelek","feyxoa")
+    // ureyinIstiyenQeder("armud","banana","portaqal","ciyelek","feyxoa")
 
+function printLanguages($a,$b,$c){
+        echo "Programming languages: $a,$b,$c <br>";
+     }
+
+     $Languages=["Phython","JavaScript","PHP"];
+
+    printLanguages(...$Languages);
 
 
     
