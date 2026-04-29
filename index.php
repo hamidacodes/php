@@ -16,46 +16,62 @@
 
     // FN-oxlu funksiyani yaratmaq ucun istifade olunur.esas xususiyyeti bir setirde yazila bilir deyerleri avtomatik return edir.
 
-    $oxluAnonimFUnkiya=fn($number) => $number *2;
+    // $oxluAnonimFUnkiya=fn($number) => $number *2;
 
 
-    $oxluAnonimFUnkiya(5);
+    // $oxluAnonimFUnkiya(5);
 
 
-    // oxlu funksiyalar xarici deyisenleri avtomatik ozlerine baglayir
+    // // oxlu funksiyalar xarici deyisenleri avtomatik ozlerine baglayir
 
-     $n=9;
+    //  $n=9;
 
-     $test=fn($param)=>$param * $n;
+    //  $test=fn($param)=>$param * $n;
 
-     echo $test(5) . "<br>";
-      echo $n;
-
-
-      //   &-referal 
-
-     $m=2;
-
-     $numune=fn(&$eded)=>$eded +=20;
-
-     echo $numune($m) . "<br>";
-
-     echo $m;
+    //  echo $test(5) . "<br>";
+    //   echo $n;
 
 
-     
+    //   //   &-referal 
 
-     function topla ($a,$b){
-        return $a + $b;
-    }
+    //  $m=2;
+
+    //  $numune=fn(&$eded)=>$eded +=20;
+
+    //  echo $numune($m) . "<br>";
+
+    //  echo $m;
+
+
+
+
+    //  function topla ($a,$b){
+    //     return $a + $b;
+    // }
 
  
 
-      function cix ($a,$b){
-        return topla($a,$b) - topla($a,$b);
+    //   function cix ($a,$b){
+    //     return topla($a,$b) - topla($a,$b);
+    // }
+
+    //  echo cix(10,5);
+
+    // recursiv funksiya
+
+    function faktorial($n){
+        if($n==0){
+          return 1;
+        }
+
+
+          return $n * faktorial ($n-1);
+        
     }
 
-     echo cix(10,5);
+    echo faktorial(5);
+
+    
 
 
 
