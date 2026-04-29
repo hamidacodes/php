@@ -59,17 +59,33 @@
 
     // recursiv funksiya
 
-    function faktorial($n){
-        if($n==0){
-          return 1;
-        }
+    // function faktorial($n){
+    //     if($n==0){
+    //       return 1;
+    //     }
 
 
-          return $n * faktorial ($n-1);
+    //       return $n * faktorial ($n-1);
         
+    // }
+
+    // echo faktorial(5);
+
+
+
+        // ...
+    function ureyinIstiyenQeder(...$items){
+        foreach($items as $item){
+            echo $item . "<br>";
+        }
     }
 
-    echo faktorial(5);
+    ureyinIstiyenQeder("armud","banana","portaqal","ciyelek","feyxoa")
+
+
+
+    
+
 
     
 
