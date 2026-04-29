@@ -12,6 +12,239 @@
 <?php
 
 
+// &-referans simvolu
+    $v=3;
+
+    $funksiya2= function () use ($v){
+
+        echo $v +=10;
+        echo '<br>';
+    };
+
+
+    $funksiya2();
+
+    echo $v  . '<br>';
+
+
+
+
+
+
+      $factor=3;
+
+       $funksiya =function($number) {
+            
+            global $factor ;
+            echo $number * $factor ."<br>";
+
+       };
+
+       $funksiya(5);
+
+    // Anonim funskiyalar-CLOUSER
+
+    $funskiyaAdi=function($param) {
+      
+        echo $param * 2 . "<br>";
+
+
+    };
+    $funskiyaAdi(5);
+   
+
+
+
+
+
+
+    $GLOBALS
+
+    $x=7;
+    $y=8;
+    function cemiHesabla(){
+
+        $cem = $GLOBALS ['x'] + $GLOBALS ['y'];
+         echo "Cem: " . $cem . "<br>";
+    }
+
+    cemiHesabla();
+
+
+
+
+
+
+
+    // lokal ve global funsksiyalar
+
+      $x=5;
+      $y=10;
+
+    function cemiHesabla() {
+       
+        global $x, $y;
+        $cem = $x + $y;
+        echo "Cem: " .$cem ."<br>";
+
+    }
+
+    cemiHesabla();
+
+
+
+
+     function test($ad) {
+        
+        echo "Salam $ad <br>";
+
+      }
+     
+     $funskiyaAdi = 'test';
+     $funskiyaAdi("Elcin");
+
+
+  
+   function test( int $a, int|float $b) {
+       $c= $a * $b;
+       echo $c;
+   }
+
+
+   test(3,4.3);
+
+
+
+
+
+   function test() {
+       $a=5;
+       $b=10;
+       $c= $a * $b;
+       echo $c;
+   }
+
+
+   test();
+
+
+
+
+
+
+
+   for($i=0; $i<10; $i++){
+
+      switch($i){
+
+        case 2:
+            echo "Bu 2-dir <br>";
+          continue 2;
+
+        case 3:
+            echo "Bu 3-dir <br>";
+            break;   
+      }
+ 
+
+            echo "Dovr: $i <br>";
+     }
+
+
+
+    for($i=0; $i<10; $i++){
+        if($i==5){
+            continue;
+        }
+
+        echo "$i <br>";
+    }
+
+
+
+
+   $fruit="alma";
+
+   switch($fruit){
+      case "alma";
+         echo "Bu bir almadir";
+         break;
+       
+      case "armud";
+         echo "Bu bir armuddur";
+         break;
+         
+       case "heyva";
+          echo "Bu bir heyvadir";
+          break;
+          
+        default:
+           echo "Bu bir meycve degildir";  
+   }
+
+
+
+
+    try{
+      $number=15;
+
+      if($number > 10){
+        echo "Reqem 10-dan boyukdur";
+      } else {
+        throw new Exception ("Reqem 10-dan kicikdir");
+      }
+    }catch(Exception $e){
+      echo "Xeta: " . $e->getMessage() . "<br>";
+    }
+
+
+
+
+     try {
+       
+      throw  new Exception ("Bu bir xeta mesajidir");
+
+     }catch(Exception $e){
+
+        echo "Xeta:" . $e->getMessage() . "<br>" ;
+
+     } finally {
+       
+        echo "Istisna olsada olmasada isleyen kod bloku";
+     }
+  
+
+
+    $i=0;
+
+      do{
+         echo "$i <br>";
+
+        $i++;
+    }
+    
+    while($i<10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // echo "<pre>";
 // print_r(
 //     [
