@@ -12,45 +12,134 @@
 <?php
 
 
-// &-referans simvolu
-    $v=3;
+// PHP   7.4
 
-    $funksiya2= function () use ($v){
+    // FN-oxlu funksiyani yaratmaq ucun istifade olunur.esas xususiyyeti bir setirde yazila bilir deyerleri avtomatik return edir.
 
-        echo $v +=10;
-        echo '<br>';
-    };
+    $oxluAnonimFUnkiya=fn($number) => $number *2;
 
 
-    $funksiya2();
-
-    echo $v  . '<br>';
+    $oxluAnonimFUnkiya(5);
 
 
+    // oxlu funksiyalar xarici deyisenleri avtomatik ozlerine baglayir
+
+     $n=9;
+
+     $test=fn($param)=>$param * $n;
+
+     echo $test(5) . "<br>";
+      echo $n;
+
+
+      //   &-referal 
+
+     $m=2;
+
+     $numune=fn(&$eded)=>$eded +=20;
+
+     echo $numune($m) . "<br>";
+
+     echo $m;
+
+
+     
+
+     function topla ($a,$b){
+        return $a + $b;
+    }
+
+ 
+
+      function cix ($a,$b){
+        return topla($a,$b) - topla($a,$b);
+    }
+
+     echo cix(10,5);
 
 
 
 
-      $factor=3;
 
-       $funksiya =function($number) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // &-referans simvolu
+//     $v=3;
+
+//     $funksiya2= function () use ($v){
+
+//         echo $v +=10;
+//         echo '<br>';
+//     };
+
+
+//     $funksiya2();
+
+//     echo $v  . '<br>';
+
+
+
+
+
+
+//       $factor=3;
+
+//        $funksiya =function($number) {
             
-            global $factor ;
-            echo $number * $factor ."<br>";
+//             global $factor ;
+//             echo $number * $factor ."<br>";
 
-       };
+//        };
 
-       $funksiya(5);
+//        $funksiya(5);
 
-    // Anonim funskiyalar-CLOUSER
+//     // Anonim funskiyalar-CLOUSER
 
-    $funskiyaAdi=function($param) {
+//     $funskiyaAdi=function($param) {
       
-        echo $param * 2 . "<br>";
+//         echo $param * 2 . "<br>";
 
 
-    };
-    $funskiyaAdi(5);
+//     };
+//     $funskiyaAdi(5);
    
 
 
@@ -58,172 +147,172 @@
 
 
 
-    $GLOBALS
+//     $GLOBALS
 
-    $x=7;
-    $y=8;
-    function cemiHesabla(){
+//     $x=7;
+//     $y=8;
+//     function cemiHesabla(){
 
-        $cem = $GLOBALS ['x'] + $GLOBALS ['y'];
-         echo "Cem: " . $cem . "<br>";
-    }
+//         $cem = $GLOBALS ['x'] + $GLOBALS ['y'];
+//          echo "Cem: " . $cem . "<br>";
+//     }
 
-    cemiHesabla();
-
-
+//     cemiHesabla();
 
 
 
 
 
-    // lokal ve global funsksiyalar
 
-      $x=5;
-      $y=10;
 
-    function cemiHesabla() {
+//     // lokal ve global funsksiyalar
+
+//       $x=5;
+//       $y=10;
+
+//     function cemiHesabla() {
        
-        global $x, $y;
-        $cem = $x + $y;
-        echo "Cem: " .$cem ."<br>";
+//         global $x, $y;
+//         $cem = $x + $y;
+//         echo "Cem: " .$cem ."<br>";
 
-    }
+//     }
 
-    cemiHesabla();
-
-
+//     cemiHesabla();
 
 
-     function test($ad) {
+
+
+//      function test($ad) {
         
-        echo "Salam $ad <br>";
+//         echo "Salam $ad <br>";
 
-      }
+//       }
      
-     $funskiyaAdi = 'test';
-     $funskiyaAdi("Elcin");
+//      $funskiyaAdi = 'test';
+//      $funskiyaAdi("Elcin");
 
 
   
-   function test( int $a, int|float $b) {
-       $c= $a * $b;
-       echo $c;
-   }
+//    function test( int $a, int|float $b) {
+//        $c= $a * $b;
+//        echo $c;
+//    }
 
 
-   test(3,4.3);
-
-
-
-
-
-   function test() {
-       $a=5;
-       $b=10;
-       $c= $a * $b;
-       echo $c;
-   }
-
-
-   test();
+//    test(3,4.3);
 
 
 
 
 
+//    function test() {
+//        $a=5;
+//        $b=10;
+//        $c= $a * $b;
+//        echo $c;
+//    }
 
 
-   for($i=0; $i<10; $i++){
+//    test();
 
-      switch($i){
 
-        case 2:
-            echo "Bu 2-dir <br>";
-          continue 2;
 
-        case 3:
-            echo "Bu 3-dir <br>";
-            break;   
-      }
+
+
+
+
+//    for($i=0; $i<10; $i++){
+
+//       switch($i){
+
+//         case 2:
+//             echo "Bu 2-dir <br>";
+//           continue 2;
+
+//         case 3:
+//             echo "Bu 3-dir <br>";
+//             break;   
+//       }
  
 
-            echo "Dovr: $i <br>";
-     }
+//             echo "Dovr: $i <br>";
+//      }
 
 
 
-    for($i=0; $i<10; $i++){
-        if($i==5){
-            continue;
-        }
+//     for($i=0; $i<10; $i++){
+//         if($i==5){
+//             continue;
+//         }
 
-        echo "$i <br>";
-    }
-
-
+//         echo "$i <br>";
+//     }
 
 
-   $fruit="alma";
 
-   switch($fruit){
-      case "alma";
-         echo "Bu bir almadir";
-         break;
+
+//    $fruit="alma";
+
+//    switch($fruit){
+//       case "alma";
+//          echo "Bu bir almadir";
+//          break;
        
-      case "armud";
-         echo "Bu bir armuddur";
-         break;
+//       case "armud";
+//          echo "Bu bir armuddur";
+//          break;
          
-       case "heyva";
-          echo "Bu bir heyvadir";
-          break;
+//        case "heyva";
+//           echo "Bu bir heyvadir";
+//           break;
           
-        default:
-           echo "Bu bir meycve degildir";  
-   }
+//         default:
+//            echo "Bu bir meycve degildir";  
+//    }
 
 
 
 
-    try{
-      $number=15;
+//     try{
+//       $number=15;
 
-      if($number > 10){
-        echo "Reqem 10-dan boyukdur";
-      } else {
-        throw new Exception ("Reqem 10-dan kicikdir");
-      }
-    }catch(Exception $e){
-      echo "Xeta: " . $e->getMessage() . "<br>";
-    }
-
-
+//       if($number > 10){
+//         echo "Reqem 10-dan boyukdur";
+//       } else {
+//         throw new Exception ("Reqem 10-dan kicikdir");
+//       }
+//     }catch(Exception $e){
+//       echo "Xeta: " . $e->getMessage() . "<br>";
+//     }
 
 
-     try {
+
+
+//      try {
        
-      throw  new Exception ("Bu bir xeta mesajidir");
+//       throw  new Exception ("Bu bir xeta mesajidir");
 
-     }catch(Exception $e){
+//      }catch(Exception $e){
 
-        echo "Xeta:" . $e->getMessage() . "<br>" ;
+//         echo "Xeta:" . $e->getMessage() . "<br>" ;
 
-     } finally {
+//      } finally {
        
-        echo "Istisna olsada olmasada isleyen kod bloku";
-     }
+//         echo "Istisna olsada olmasada isleyen kod bloku";
+//      }
   
 
 
-    $i=0;
+//     $i=0;
 
-      do{
-         echo "$i <br>";
+//       do{
+//          echo "$i <br>";
 
-        $i++;
-    }
+//         $i++;
+//     }
     
-    while($i<10)
+//     while($i<10)
 
 
 
