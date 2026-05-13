@@ -242,17 +242,33 @@
 // echo Counter::$count;
 
 
-class Math {
+// class Math {
 
-   public static function add ($a,$b){
-    return $a+$b;
-   }
+//    public static function add ($a,$b){
+//     return $a+$b;
+//    }
    
- }
+//  }
 
- $result=Math::add(5,10);
+//  $result=Math::add(5,10);
 
-echo "The result of addition is:" .$result;
+// echo "The result of addition is:" .$result;
+
+class User {
+
+   public static $userCount=0;
+  
+   public function __construct()
+   {
+     self::$userCount++;
+   }
+
+  }
+
+   $user1=new User();
+   $user2=new User();
+
+   echo "Istifadeci sayi: " .User::$userCount;
 
 
 
