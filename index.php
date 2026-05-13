@@ -182,6 +182,41 @@
   $test->sayHello()
 
     
+class ParentClass {
+
+  protected $info = "This is a parent class. <br>";
+
+  protected function showInfo() {
+      echo "This is a protected method in the parent class.";
+      
+
+   }
+
+
+
+}
+
+
+
+
+class ChildClass extends ParentClass {
+  
+  public function accessProtected(){
+
+    echo $this->info;
+    $this->showInfo();
+
+
+  }
+
+
+
+
+}
+
+$child=new ChildClass();
+
+$child->accessProtected();
 
 
 
