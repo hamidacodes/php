@@ -219,6 +219,28 @@ $child=new ChildClass();
 $child->accessProtected();
 
 
+// static keyword-class obyekt yaradilmadan istifade edile biler.
+
+// static property ve metodlar-classa mexsusdur.
+
+// this acar sozu ile istiade edile bilmez evezinde sekf ve ya static istifade oluna biler.
+
+class Counter {
+  public static $count =0;
+
+
+  public static function increment() {
+    self::$count++;
+  }
+}
+
+$a = new Counter ();
+
+
+Counter::increment();
+Counter::increment();
+echo Counter::$count;
+
 
 
 
