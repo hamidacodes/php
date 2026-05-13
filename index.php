@@ -93,48 +93,93 @@
 <?php
 
 
-   class Car {
+//    class Car {
 
-    // propery
-      public $color;
-      public $model;
-
-
-
-    //  metod
-      public function start() {
-        echo "Avtomobil ise dusdu. <hr>";
-      }
-   }
-
-   $bmw = new Car ();
-   $bmw->color="qirmizi";
-   $bmw->model="Bmw X5";
-
-   echo $bmw->color . "<br>";
-   echo $bmw->model . "<br>";
-    $bmw->start();
-
-   $mercedes = new Car ();
-   $mercedes->color="boz";
-   $mercedes->model="mercedes S-class";
-
-   echo $mercedes->color . "<br>";
-   echo $mercedes->model . "<br>";
-    $mercedes->start();
+//     // propery
+//       public $color;
+//       public $model;
 
 
 
+//     //  metod
+//       public function start() {
+//         echo "Avtomobil ise dusdu. <hr>";
+//       }
+//    }
 
-    $dodge = new Car ();
-    $dodge->color="qara";
-    $dodge->model="dodge hellcat";
+//    $bmw = new Car ();
+//    $bmw->color="qirmizi";
+//    $bmw->model="Bmw X5";
 
-    echo $dodge->color . "<br>";
-    echo $dodge->model . "<br>";
-    $dodge->start();
+//    echo $bmw->color . "<br>";
+//    echo $bmw->model . "<br>";
+//     $bmw->start();
+
+//    $mercedes = new Car ();
+//    $mercedes->color="boz";
+//    $mercedes->model="mercedes S-class";
+
+//    echo $mercedes->color . "<br>";
+//    echo $mercedes->model . "<br>";
+//     $mercedes->start();
+
+
+
+
+//     $dodge = new Car ();
+//     $dodge->color="qara";
+//     $dodge->model="dodge hellcat";
+
+//     echo $dodge->color . "<br>";
+//     echo $dodge->model . "<br>";
+//     $dodge->start();
+
+
+
+
+
+
+
+
     
+// Access Modifiers
 
+  // public-hem class icinde hem class colunde el catan olur.her yerde istifade edile bilir en genis giris icazesine  sahibdir
+
+
+
+
+
+  // private-yalniz classin icersinde isleye bilir
+
+
+
+
+
+  // protected-classin daxilinde isleye bilir.
+
+
+
+
+  // inheritance-irsiyyet.
+
+  class test{
+    public $name = "Jhon Doe";
+
+    public function sayHello() {
+
+      echo "Hello,my name is" . $this->name;
+
+    }
+
+
+
+
+  }
+
+  $test = new Test();
+  echo $test->name;
+  $test->sayHello()
 
     
 
