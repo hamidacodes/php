@@ -90,7 +90,7 @@
 
 //     printLanguages(...$Languages);
 
-<?php
+
 
 
 //    class Car {
@@ -163,60 +163,60 @@
 
   // inheritance-irsiyyet.
 
-  class test{
-    public $name = "Jhon Doe";
+//   class test{
+//     public $name = "Jhon Doe";
 
-    public function sayHello() {
+//     public function sayHello() {
 
-      echo "Hello,my name is" . $this->name;
+//       echo "Hello,my name is" . $this->name;
 
-    }
-
-
+//     }
 
 
-  }
 
-  $test = new Test();
-  echo $test->name;
-  $test->sayHello()
+
+//   }
+
+//   $test = new Test();
+//   echo $test->name;
+//   $test->sayHello()
 
     
-class ParentClass {
+// class ParentClass {
 
-  protected $info = "This is a parent class. <br>";
+//   protected $info = "This is a parent class. <br>";
 
-  protected function showInfo() {
-      echo "This is a protected method in the parent class.";
+//   protected function showInfo() {
+//       echo "This is a protected method in the parent class.";
       
 
-   }
+//    }
 
 
 
-}
+// }
 
 
 
 
-class ChildClass extends ParentClass {
+// class ChildClass extends ParentClass {
   
-  public function accessProtected(){
+//   public function accessProtected(){
 
-    echo $this->info;
-    $this->showInfo();
-
-
-  }
+//     echo $this->info;
+//     $this->showInfo();
 
 
+//   }
 
 
-}
 
-$child=new ChildClass();
 
-$child->accessProtected();
+// }
+
+// $child=new ChildClass();
+
+// $child->accessProtected();
 
 
 // static keyword-class obyekt yaradilmadan istifade edile biler.
@@ -225,22 +225,34 @@ $child->accessProtected();
 
 // this acar sozu ile istiade edile bilmez evezinde sekf ve ya static istifade oluna biler.
 
-class Counter {
-  public static $count =0;
+// class Counter {
+//   public static $count =0;
 
 
-  public static function increment() {
-    self::$count++;
-  }
-}
+//   public static function increment() {
+//     self::$count++;
+//   }
+// }
 
-$a = new Counter ();
+// $a = new Counter ();
 
 
-Counter::increment();
-Counter::increment();
-echo Counter::$count;
+// Counter::increment();
+// Counter::increment();
+// echo Counter::$count;
 
+
+class Math {
+
+   public static function add ($a,$b){
+    return $a+$b;
+   }
+   
+ }
+
+ $result=Math::add(5,10);
+
+echo "The result of addition is:" .$result;
 
 
 
@@ -1108,8 +1120,7 @@ echo Counter::$count;
 
 
 ?>
-
-// <!-- // <script>
+ <!-- // <script>
 // let a = {
 //     'ad': 'Ali'
 //     'soyad': 'Veli'
