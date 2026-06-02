@@ -303,62 +303,103 @@
 
           //  OPP de bir nov sablondur interfacede metodlar yalniz elan edilir.yalniz onlarin ici yazilmir(implementation{bezekli moterizenin ozu })         
 
-   interface Shape {
+//    interface Shape {
 
-    public function area();
-    public function perimetr();
+//     public function area();
+//     public function perimetr();
 
 
-   }  
+//    }  
 
-   class Circle implements Shape {
+//    class Circle implements Shape {
 
-    private $radius;
+//     private $radius;
 
-    public function __construct($radius)
-    {
-        $this->radius =$radius;
-    }
+//     public function __construct($radius)
+//     {
+//         $this->radius =$radius;
+//     }
     
-     public function area() {
-        return pi() * $this->radius ** 2;
-     }
+//      public function area() {
+//         return pi() * $this->radius ** 2;
+//      }
 
-     public function perimetr() {
-         return pi() * $this->radius * 2;
-     }
+//      public function perimetr() {
+//          return pi() * $this->radius * 2;
+//      }
+//    }
+
+
+//    class Rectangle implements Shape {
+
+//     private $width ,$height;
+
+//     public function __construct($width,$height)
+//     {
+//         $this->width =$width;
+//          $this->height =$height;
+//     }
+    
+//      public function area() {
+//         return $this->width * $this->height;
+//      }
+
+//      public function perimetr() {
+//          return ($this->width + $this->height)  * 2;
+//      }
+//    }
+
+//    $circle = new Circle(5);
+//    $rectangle =new Rectangle(4,6);
+
+
+//    echo "Dairenin sahesi:                   " . $circle->area()           ."<br>";
+//    echo "Dairenin perimetri:                " . $circle->perimetr()       ."<br>";
+//    echo "Duzbucaqlinin  sahesi:             " . $rectangle->area()           ."<br>";
+//    echo "Duzbucaqlinin  perimetri:          " . $rectangle->perimetr()       ."<br>";
+
+interface Engine {
+
+    public function start ();
+
+}
+
+
+interface Fuel {
+
+  public function refuel($liters);
+
+  }
+  
+
+
+class Car implements Engine,Fuel {
+
+  private $fuelLevel =0;
+
+   public function start() {
+      if($this->fuelLevel > 0) {
+        echo "Masin ise dusdu <br>";
+      } else {
+        echo "Yanacaq yoxdur.<br>";
+      }
+
    }
 
-
-   class Rectangle implements Shape {
-
-    private $width ,$height;
-
-    public function __construct($width,$height)
-    {
-        $this->width =$width;
-         $this->height =$height;
+    public function refuel($liters) {
+ 
+      $this->fuelLevel += $liters;
+      echo "Yanacaq dolduruldu:$liters litr.Hazirki seviyye:$this->fuelLevel litr teskil edir.<br>";
+     
     }
-    
-     public function area() {
-        return $this->width * $this->height;
-     }
-
-     public function perimetr() {
-         return ($this->width + $this->height)  * 2;
-     }
-   }
-
-   $circle = new Circle(5);
-   $rectangle =new Rectangle(4,6);
+}
 
 
-   echo "Dairenin sahesi:                   " . $circle->area()           ."<br>";
-   echo "Dairenin perimetri:                " . $circle->perimetr()       ."<br>";
-   echo "Duzbucaqlinin  sahesi:             " . $rectangle->area()           ."<br>";
-   echo "Duzbucaqlinin  perimetri:          " . $rectangle->perimetr()       ."<br>";
+$car=new Car();
 
-
+$car->start();
+$car->refuel(400);
+$car->start();
 
 
 
