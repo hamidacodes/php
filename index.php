@@ -422,29 +422,70 @@
 
 // echo MyClass::MESSAGE;
 
-interface InterfaceA {
-   const GREETING1 ="salam";
+// interface InterfaceA {
+//    const GREETING1 ="salam";
+// }
+
+
+// interface InterfaceB {
+//   const GREETING2 ="hello";
+// }
+
+
+// class MyClass implements InterfaceA,InterfaceB {
+
+//   public function sayHello() {
+//     echo InterfaceA::GREETING1;
+//     echo InterfaceB::GREETING2;
+//   }
+
+// }
+
+// $obj=new MyClass();
+// $obj->SayHello();
+
+
+
+interface Shape {
+
+  public function area(); 
+
 }
 
+class Circle implements Shape {
 
-interface InterfaceB {
-  const GREETING2 ="hello";
-}
+  private $radius;
 
-
-class MyClass implements InterfaceA,InterfaceB {
-
-  public function sayHello() {
-    echo InterfaceA::GREETING1;
-    echo InterfaceB::GREETING2;
+  public function __construct($radius)
+  {
+    $this->radius=$radius;
   }
 
+  public function area() {
+    return pi() * $this->radius ** 2;
+  }
 }
 
-$obj=new MyClass();
-$obj->SayHello();
+class Rectangle implements Shape {
+  private $width,$height;
+
+  public function __construct($width,$height) {
+    $this->width=$width;
+     $this->height=$height;
+
+  }
+
+   public function area() {
+     return $this->width * $this->height;
+   }
+}
 
 
+$circle = new Circle (5);
+$rectangle =new Rectangle (3,8);
+
+echo "Dairenin sahesi:" .$circle->area() . "<br>";
+echo "Duzbucaqlinin sahesi:".$rectangle->area() ."<br>";
 
 
 
