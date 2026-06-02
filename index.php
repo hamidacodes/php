@@ -542,23 +542,54 @@
 // bir class sadece basqa bir dene classi extends ede biler.
  
 
-trait sayHello {
+// trait sayHello {
 
-  public function hello() {
-     echo "Salam dünya!";
+//   public function hello() {
+//      echo "Salam dünya!";
+//   }
+// }
+
+
+// class MyClass {
+
+//   use sayHello; 
+  
+
+// }
+// $obj = new MyClass();
+// $obj->hello();
+
+
+trait TraitA {
+
+  public function greet() {
+     echo "Bu Trait A-dir";
   }
+}
+
+
+trait TraitB {
+
+  
+
+  public function greet() {
+     echo "Bu Trait B-dir";
+  }
+  
 }
 
 
 class MyClass {
 
-  use sayHello; 
-  
+ use TraitA,TraitB{
+    TraitA::greet insteadOf TraitB;
+    TraitB::greet as sayHello;
+ }  
 
 }
 $obj = new MyClass();
-$obj->hello();
-
+$obj->greet();
+$obj->sayHello();
 
 
 
