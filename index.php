@@ -618,28 +618,51 @@
 // $obj->greet();
 
 
-trait TraitA {
+// trait TraitA {
 
-  abstract public function greet();
+//   abstract public function greet();
 
-}
+// }
 
 
 
-class MyClass {
+// class MyClass {
 
- use TraitA;
+//  use TraitA;
 
- public function greet() {
-  echo "miyav miyav hav hav";
- }
+//  public function greet() {
+//   echo "miyav miyav hav hav";
+//  }
     
    
 
-}
-$obj = new MyClass();
-$obj->greet();
+// }
+// $obj = new MyClass();
+// $obj->greet();
 
+class parentClass {
+   public function sayHello() {
+    echo 'Parent Hemide';
+   }
+}
+
+trait MyTrait {
+   public function sayHello() {
+    echo 'Hello from Turkan';
+   }
+}
+
+class ChildClass extends ParentClass {
+
+    use MyTrait;
+
+}
+
+$obj=new ChildClass();
+$obj->sayHello();
+
+$obj2=new ParentClass();
+$obj2->sayHello();
 
 
 
