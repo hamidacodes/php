@@ -271,32 +271,92 @@
 //    echo "Istifadeci sayi: " .User::$userCount;
 
 
-class Animal {
-  public function sound () {
-    echo "Heyvan sesi cixarir.<br>";
-  }
-}
+// class Animal {
+//   public function sound () {
+//     echo "Heyvan sesi cixarir.<br>";
+//   }
+// }
 
-class Dog  extends Animal {
-  public function sound () {
-    echo "it hurur hav hav.<br>";
-  }
-}
+// class Dog  extends Animal {
+//   public function sound () {
+//     echo "it hurur hav hav.<br>";
+//   }
+// }
 
-class Cat extends Animal {
-  public function sound () {
-    echo "pisik miyolduyur miav miav.<br>";
-  }
-}
+// class Cat extends Animal {
+//   public function sound () {
+//     echo "pisik miyolduyur miav miav.<br>";
+//   }
+// }
 
-$dog=new Dog ();
-$cat=new cat ();
-$animal=new Animal();
+// $dog=new Dog ();
+// $cat=new cat ();
+// $animal=new Animal();
 
 
-$dog->sound();
-$cat->sound();
-$animal->sound();
+// $dog->sound();
+// $cat->sound();
+// $animal->sound();
+
+
+// INTERFACE
+
+          //  OPP de bir nov sablondur interfacede metodlar yalniz elan edilir.yalniz onlarin ici yazilmir(implementation{bezekli moterizenin ozu })         
+
+   interface Shape {
+
+    public function area();
+    public function perimetr();
+
+
+   }  
+
+   class Circle implements Shape {
+
+    private $radius;
+
+    public function __construct($radius)
+    {
+        $this->radius =$radius;
+    }
+    
+     public function area() {
+        return pi() * $this->radius ** 2;
+     }
+
+     public function perimetr() {
+         return pi() * $this->radius * 2;
+     }
+   }
+
+
+   class Rectangle implements Shape {
+
+    private $width ,$height;
+
+    public function __construct($width,$height)
+    {
+        $this->width =$width;
+         $this->height =$height;
+    }
+    
+     public function area() {
+        return $this->width * $this->height;
+     }
+
+     public function perimetr() {
+         return ($this->width + $this->height)  * 2;
+     }
+   }
+
+   $circle = new Circle(5);
+   $rectangle =new Rectangle(4,6);
+
+
+   echo "Dairenin sahesi:                   " . $circle->area()           ."<br>";
+   echo "Dairenin perimetri:                " . $circle->perimetr()       ."<br>";
+   echo "Duzbucaqlinin  sahesi:             " . $rectangle->area()           ."<br>";
+   echo "Duzbucaqlinin  perimetri:          " . $rectangle->perimetr()       ."<br>";
 
 
 
