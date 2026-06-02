@@ -596,13 +596,32 @@
 // $obj->greet();
 // $obj->sayHello();
 
+// trait TraitA {
+
+//   public $name = "Trait Turkan ve Hemide";
+
+//   public function greet() {
+//      echo $this->name;
+//   }
+// }
+
+
+
+// class MyClass {
+
+//  use TraitA;
+    
+   
+
+// }
+// $obj = new MyClass();
+// $obj->greet();
+
+
 trait TraitA {
 
-  public $name = "Trait Turkan ve Hemide";
+  abstract public function greet();
 
-  public function greet() {
-     echo $this->name;
-  }
 }
 
 
@@ -610,15 +629,16 @@ trait TraitA {
 class MyClass {
 
  use TraitA;
+
+ public function greet() {
+  echo "miyav miyav hav hav";
+ }
     
    
 
 }
 $obj = new MyClass();
 $obj->greet();
-
-
-
 
 
 
