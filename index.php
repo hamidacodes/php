@@ -254,24 +254,49 @@
 
 // echo "The result of addition is:" .$result;
 
-class User {
+// class User {
 
-   public static $userCount=0;
+//    public static $userCount=0;
   
-   public function __construct()
-   {
-     self::$userCount++;
-   }
+//    public function __construct()
+//    {
+//      self::$userCount++;
+//    }
 
+//   }
+
+//    $user1=new User();
+//    $user2=new User();
+
+//    echo "Istifadeci sayi: " .User::$userCount;
+
+
+class Animal {
+  public function sound () {
+    echo "Heyvan sesi cixarir.<br>";
   }
+}
 
-   $user1=new User();
-   $user2=new User();
+class Dog  extends Animal {
+  public function sound () {
+    echo "it hurur hav hav.<br>";
+  }
+}
 
-   echo "Istifadeci sayi: " .User::$userCount;
+class Cat extends Animal {
+  public function sound () {
+    echo "pisik miyolduyur miav miav.<br>";
+  }
+}
+
+$dog=new Dog ();
+$cat=new cat ();
+$animal=new Animal();
 
 
-
+$dog->sound();
+$cat->sound();
+$animal->sound();
 
 
 
