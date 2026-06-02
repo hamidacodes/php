@@ -489,55 +489,75 @@
 
 
 
-abstract class Shape {
+// abstract class Shape {
 
-    abstract public function area();
+//     abstract public function area();
 
-    public function describe() {
-        return "Bu bir şekildir.<br>";
-    }
+//     public function describe() {
+//         return "Bu bir şekildir.<br>";
+//     }
+// }
+
+// class Circle extends Shape {
+
+//     private $radius;
+
+//     public function __construct($radius)
+//     {
+//         $this->radius = $radius;
+//     }
+
+//     public function area() {
+//         return pi() * $this->radius ** 2;
+//     }
+// }
+
+// class Rectangle extends Shape {
+
+//     private $width, $height;
+
+//     public function __construct($width, $height)
+//     {
+//         $this->width = $width;
+//         $this->height = $height;
+//     }
+
+//     public function area() {
+//         return $this->width * $this->height;
+//     }
+// }
+
+// $circle = new Circle(5);
+// $rectangle = new Rectangle(3, 8);
+
+// echo "Dairenin sahesi: " . $circle->area() . "<br>";
+// echo $circle->describe();
+
+// echo "Duzbucaqlinin sahesi: " . $rectangle->area() . "<br>";
+// echo $rectangle->describe();
+
+
+// Traits
+
+// bir class sadece basqa bir dene classi extends ede biler.
+ 
+
+trait sayHello {
+
+  public function hello() {
+     echo "Salam dünya!";
+  }
 }
 
-class Circle extends Shape {
 
-    private $radius;
+class MyClass {
 
-    public function __construct($radius)
-    {
-        $this->radius = $radius;
-    }
+  use sayHello; 
+  
 
-    public function area() {
-        return pi() * $this->radius ** 2;
-    }
 }
-
-class Rectangle extends Shape {
-
-    private $width, $height;
-
-    public function __construct($width, $height)
-    {
-        $this->width = $width;
-        $this->height = $height;
-    }
-
-    public function area() {
-        return $this->width * $this->height;
-    }
-}
-
-$circle = new Circle(5);
-$rectangle = new Rectangle(3, 8);
-
-echo "Dairenin sahesi: " . $circle->area() . "<br>";
-echo $circle->describe();
-
-echo "Duzbucaqlinin sahesi: " . $rectangle->area() . "<br>";
-echo $rectangle->describe();
-
-
-
+$obj = new MyClass();
+$obj->hello();
 
 
 
