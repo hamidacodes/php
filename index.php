@@ -708,11 +708,42 @@
   
 // }
 
-class ParentClass {
-   public function greet() {
-     echo "Salam";
+// class ParentClass {
+//    public function greet() {
+//      echo "Salam";
+//    }
+// }
+
+// magic method 
+
+// __construct()
+//__destruct()
+
+//__get()
+//__set()
+
+//__call()
+
+//__toString()
+
+// __invoke()
+
+// __clone()
+
+
+class MyClass {
+
+   public function __get($name) {
+     echo "Xasse '$name' movcud deyil ve elcatmazdir";
+
    }
+   
 }
+
+$obj= new MyClass();
+$obj->miau;
+
+
 
 
 
