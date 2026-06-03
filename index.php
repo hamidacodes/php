@@ -640,32 +640,56 @@
 // $obj = new MyClass();
 // $obj->greet();
 
-class parentClass {
-   public function sayHello() {
-    echo 'Parent Hemide';
-   }
-}
+// class parentClass {
+//    public function sayHello() {
+//     echo 'Parent Hemide';
+//    }
+// }
 
-trait MyTrait {
-   public function sayHello() {
-    echo 'Hello from Turkan';
-   }
-}
+// trait MyTrait {
+//    public function sayHello() {
+//     echo 'Hello from Turkan';
+//    }
+// }
 
-class ChildClass extends ParentClass {
+// class ChildClass extends ParentClass {
 
-    use MyTrait;
+//     use MyTrait;
 
-}
+// }
 
-$obj=new ChildClass();
-$obj->sayHello();
+// $obj=new ChildClass();
+// $obj->sayHello();
 
-$obj2=new ParentClass();
-$obj2->sayHello();
+// $obj2=new ParentClass();
+// $obj2->sayHello();
 
 
 
+
+class User {
+
+    //  gizli melumat (private property)
+
+    private $name;
+
+    public function setName($name){
+        if (strlen($name)>2) {
+           $this->name=$name;
+        } else {
+           echo "Ad en azi 3 simvol olmalidir!<br>";
+        }
+    }
+
+    public function getName() {
+       return $this->name;
+    }
+
+ }
+
+ $user=new User();
+ $user->setName("ali");
+ echo $user->getName();
 
 
 
