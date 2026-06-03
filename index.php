@@ -667,29 +667,68 @@
 
 
 
-class User {
+// class User {
 
-    //  gizli melumat (private property)
+//     //  gizli melumat (private property)
 
-    private $name;
+//     private $name;
 
-    public function setName($name){
-        if (strlen($name)>2) {
-           $this->name=$name;
-        } else {
-           echo "Ad en azi 3 simvol olmalidir!<br>";
-        }
-    }
+//     public function setName($name){
+//         if (strlen($name)>2) {
+//            $this->name=$name;
+//         } else {
+//            echo "Ad en azi 3 simvol olmalidir!<br>";
+//         }
+//     }
 
-    public function getName() {
-       return $this->name;
-    }
+//     public function getName() {
+//        return $this->name;
+//     }
 
- }
+//  }
 
- $user=new User();
- $user->setName("ali");
- echo $user->getName();
+//  $user=new User();
+//  $user->setName("ali");
+//  echo $user->getName();
+
+
+// final
+
+// class MyClass {
+
+
+//    public function sayHello() {
+//       echo "Salam bu MyClass-dir";
+//    } 
+
+// }
+
+
+// class ChildClass extends MyClass {
+  
+// }
+
+class ParentClass {
+   public function greet() {
+     echo "Salam";
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
