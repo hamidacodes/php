@@ -731,21 +731,79 @@
 // __clone()
 
 
+// class MyClass {
+
+//    public function __get($name) {
+//      echo "Xasse '$name' movcud deyil ve elcatmazdir";
+
+//    }
+   
+// }
+
+// $obj= new MyClass();
+// $obj->miau;
+
+
+
 class MyClass {
 
-   public function __get($name) {
-     echo "Xasse '$name' movcud deyil ve elcatmazdir";
+   public function __call($name,$value) {
+     echo "Metod '$name' movcud deyil ve elcatmazdir";
 
    }
    
 }
 
 $obj= new MyClass();
-$obj->miau;
+$obj->telefon("bir","iki");
+
+class MyClass {
+
+   public function __toString() {
+     return "Bu obyekt string olaraq istifade edilir";
+
+   }
+   
+}
+
+$obj= new MyClass();
+echo $obj;
+
+class MyClass {
+
+   public function __invoke($param) {
+     echo "'$param'obyekit bir funskiya kimi cagirilanda avtomatik cagirilan metoda __invoake magic metodu deyilir";
+
+   }
+   
+}
+
+$obj= new MyClass();
+$obj('Test');
 
 
 
 
+class MyClass {
+
+  public $name;
+
+  public function __construct($name)
+  {
+    $this->name=$name;
+  }
+
+   public function __clone() {
+   
+    $this->name="Klonlanmis" .$this->name;
+
+   }
+   
+}
+
+$obj1= new MyClass('Turkan');
+ 
+echo $obj1->name .'<br>';
 
 
 
