@@ -1639,23 +1639,43 @@
     //  cont in class
 
 
-    class Avtomobil 
-    {
-        const MAX_SPEED = 240;
-        const MIN_SPEED = 0;
+    // class Avtomobil 
+    // {
+    //     const MAX_SPEED = 240;
+    //     const MIN_SPEED = 0;
 
-        public function getMaxSpeed()
-        {
-            return self::MAX_SPEED;
-        }
-    }
+    //     public function getMaxSpeed()
+    //     {
+    //         return self::MAX_SPEED;
+    //     }
+    // }
 
 
 
     // $car = new Avtomobil();
     // echo $car->getMaxSpeed(); 
 
-    echo Avtomobil :: MAX_SPEED;
+    // echo Avtomobil :: MAX_SPEED;
+
+
+
+    require_once 'src/ProjectA/User.php';
+    require_once 'src/ProjectB/UserB.php';
+
+
+
+
+
+        use ProjectB\UserB;
+        
+        $userB = new UserB();
+        echo $userB->greet();
+
+
+
+
+
+ 
 
 
 
