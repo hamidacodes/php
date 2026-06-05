@@ -1666,10 +1666,20 @@
 
 
 
-        use ProjectB\UserB;
+        use ProjectA\User as UserA;
+        use ProjectB\User as UserB;
         
+        $userA = new UserA();
+        echo $userA->greet();
+
+
+
+
         $userB = new UserB();
         echo $userB->greet();
+        
+
+
 
 
 

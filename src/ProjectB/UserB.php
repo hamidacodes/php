@@ -8,16 +8,16 @@
 
     namespace ProjectB;
 
-    use ProjectA\User;
 
 
-    class UserB
+
+    class User
     {
         public function greet()
 
         {
-            $userA = new User();
-            return $userA->greet();
+           
+            return "Hemide topu tut.";
 
         }
     }

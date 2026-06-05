@@ -9,6 +9,7 @@
     namespace ProjectA;
 
     class User
+    
     {
         public function greet()
         
