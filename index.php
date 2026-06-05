@@ -1652,8 +1652,10 @@
 
 
 
-    $car = new Avtomobil();
-    echo $car->getMaxSpeed(); 
+    // $car = new Avtomobil();
+    // echo $car->getMaxSpeed(); 
+
+    echo Avtomobil :: MAX_SPEED;
 
 
 
