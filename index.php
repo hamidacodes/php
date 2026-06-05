@@ -1659,24 +1659,24 @@
 
 
 
-    require_once 'src/ProjectA/User.php';
-    require_once 'src/ProjectB/UserB.php';
+    // require_once 'src/ProjectA/User.php';
+    // require_once 'src/ProjectB/UserB.php';
 
 
 
 
 
-        use ProjectA\User as UserA;
-        use ProjectB\User as UserB;
+    //     use ProjectA\User as UserA;
+    //     use ProjectB\User as UserB;
         
-        $userA = new UserA();
-        echo $userA->greet();
+    //     $userA = new UserA();
+    //     echo $userA->greet();
 
 
 
 
-        $userB = new UserB();
-        echo $userB->greet();
+    //     $userB = new UserB();
+    //     echo $userB->greet();
         
 
 
