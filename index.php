@@ -745,65 +745,65 @@
 
 
 
-class MyClass {
+// class MyClass {
 
-   public function __call($name,$value) {
-     echo "Metod '$name' movcud deyil ve elcatmazdir";
+//    public function __call($name,$value) {
+//      echo "Metod '$name' movcud deyil ve elcatmazdir";
 
-   }
+//    }
    
-}
+// }
 
-$obj= new MyClass();
-$obj->telefon("bir","iki");
+// $obj= new MyClass();
+// $obj->telefon("bir","iki");
 
-class MyClass {
+// class MyClass {
 
-   public function __toString() {
-     return "Bu obyekt string olaraq istifade edilir";
+//    public function __toString() {
+//      return "Bu obyekt string olaraq istifade edilir";
 
-   }
+//    }
    
-}
+// }
 
-$obj= new MyClass();
-echo $obj;
+// $obj= new MyClass();
+// echo $obj;
 
-class MyClass {
+// class MyClass {
 
-   public function __invoke($param) {
-     echo "'$param'obyekit bir funskiya kimi cagirilanda avtomatik cagirilan metoda __invoake magic metodu deyilir";
+//    public function __invoke($param) {
+//      echo "'$param'obyekit bir funskiya kimi cagirilanda avtomatik cagirilan metoda __invoake magic metodu deyilir";
 
-   }
+//    }
    
-}
+// }
 
-$obj= new MyClass();
-$obj('Test');
-
-
+// $obj= new MyClass();
+// $obj('Test');
 
 
-class MyClass {
 
-  public $name;
 
-  public function __construct($name)
-  {
-    $this->name=$name;
-  }
+// class MyClass {
 
-   public function __clone() {
+//   public $name;
+
+//   public function __construct($name)
+//   {
+//     $this->name=$name;
+//   }
+
+//    public function __clone() {
    
-    $this->name="Klonlanmis" .$this->name;
+//     $this->name="Klonlanmis" .$this->name;
 
-   }
+//    }
    
-}
+// }
 
-$obj1= new MyClass('Turkan');
+// $obj1= new MyClass('Turkan');
  
-echo $obj1->name .'<br>';
+// echo $obj1->name .'<br>';
 
 
 
@@ -1633,6 +1633,40 @@ echo $obj1->name .'<br>';
     // }
     
     // while($i<10)
+
+
+
+    //  cont in class
+
+
+    class Avtomobil 
+    {
+        const MAX_SPEED = 240;
+        const MIN_SPEED = 0;
+
+        public function getMaxSpeed()
+        {
+            return self::MAX_SPEED;
+        }
+    }
+
+
+
+    $car = new Avtomobil();
+    echo $car->getMaxSpeed(); 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
