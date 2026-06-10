@@ -8,10 +8,9 @@ class Greetable {
 
 $object =new class extends Greetable {
     public function greet() {
-        return "Hello,World" ;
+        return parent::greet() ;
     }
 };
 
 
 echo $object->greet();
-
