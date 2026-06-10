@@ -1,16 +1,34 @@
 <?php
 
-class Greetable {
-    public function greet() {
-        return "Hello!";
-    }
+// class Greetable {
+//     public function greet() {
+//         return "Hello!";
+//     }
+// }
+
+// $object =new class extends Greetable {
+//     public function greet() {
+//         return parent::greet() ;
+//     }
+// };
+
+
+// echo $object->greet();
+
+
+
+// cloning and copy
+
+// &
+
+class Hamida {
+    public $name='Merhaba';
 }
 
-$object =new class extends Greetable {
-    public function greet() {
-        return parent::greet() ;
-    }
-};
+$turkan = new Hamida();
+
+echo $turkan->name;
 
 
-echo $object->greet();
+ $object1=new stdClass();
+ $object1->name="John";
