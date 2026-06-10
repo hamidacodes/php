@@ -1,10 +1,10 @@
 <?php
 
-namespace MyApp\Game;
+// namespace MyApp\Game;
 
-class GameController  {
+// class GameController  {
 
-    public function __construct () {
-        echo "gamecontroller class";
-    }
-}
+//     public function __construct () {
+//         echo "gamecontroller class";
+//     }
+// }

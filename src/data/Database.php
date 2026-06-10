@@ -1,10 +1,10 @@
 <?php
 
-namespace MyApp\Data;
+// namespace MyApp\Data;
 
-class Database  {
+// class Database  {
 
-    public function __construct () {
-        echo "database class";
-    }
-}
+//     public function __construct () {
+//         echo "database class";
+//     }
+// }
