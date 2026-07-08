@@ -142,41 +142,41 @@
 
 
 
-<?php
+// <?php
 
-class ApiClient
-{
+// class ApiClient
+// {
 
-    private $baseUrl;
+//     private $baseUrl;
     
-    public function __construct($baseUrl)
-    {
-        $this->baseUrl=$baseUrl;
-    }
+//     public function __construct($baseUrl)
+//     {
+//         $this->baseUrl=$baseUrl;
+//     }
 
-    public function get($endpoint)
-    {
+//     public function get($endpoint)
+//     {
 
-        $url=$this->baseUrl . $endpoint;
+//         $url=$this->baseUrl . $endpoint;
 
-        // echo $url;
-        $ch=curl_init($url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//         // echo $url;
+//         $ch=curl_init($url);
+//         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
-        $response =curl_exec($ch);
+//         $response =curl_exec($ch);
 
-        curl_close($ch);
+//         curl_close($ch);
 
-        return json_decode($response,true);
-    }
-}
+//         return json_decode($response,true);
+//     }
+// }
 
-$apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3a55019c/latest/');
+// $apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3a55019c/latest/');
 
-$data=$apiClient->get("USD");
+// $data=$apiClient->get("USD");
 
-// echo "<pre>";
-// print_r($data->conversion_rates->AZN);
-// echo "</pre>";
+// // echo "<pre>";
+// // print_r($data->conversion_rates->AZN);
+// // echo "</pre>";
 
-echo "1 USD - > EUR " .$data->conversion_rates->EUR . "<br>";
+// echo "1 USD - > EUR " .$data->conversion_rates->EUR . "<br>";
