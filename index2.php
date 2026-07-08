@@ -71,70 +71,112 @@
 
 
 
-class ProductManager{
-    private $filePath;
+// class ProductManager{
+//     private $filePath;
 
-    public function __construct($filePath)
+//     public function __construct($filePath)
+//     {
+//         $this->filePath =$filePath;
+//     }
+
+//     public function saveProducts(array $products) {
+//         $jsonData=json_encode($products,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+//         // echo "<pre>";
+//         // print_r($jsonData);
+//         //    echo "</pre>";
+
+//         if (json_last_error()===JSON_ERROR_NONE) {
+//             file_put_contents($this->filePath,$jsonData);
+//             echo "Mehsullar ugurla saxlanildi\n";
+//         }else{
+//             echo "JSON xeta :" .json_last_error_msg() . "\n";
+//         }
+//     }
+
+//     public function loadProducts() {
+//         if (!file_exists($this->filePath)) {
+//             echo "Fayl movcud deyil";
+//             return [];
+//         }
+
+//         $jsonData=file_get_contents($this->filePath);
+//         $products=json_decode($jsonData,true);
+
+//         if(json_last_error()==JSON_ERROR_NONE) {
+//             return $products;
+//         } else {
+//             echo "Json xeta mesaji:" . json_last_error() . "\n";
+//             return[];
+//         }
+//     }
+// }
+
+// $productManager = new ProductManager('products.json');
+
+// $products = [
+//     [
+//         'id'=>1,
+//         'name'=>'Telefon',
+//         'price'=>1000,
+//         'stock'=>50
+
+//     ],
+
+//     [
+//         'id'=>2,
+//         'name'=>'Laptop',
+//         'price'=>2000,
+//         'stock'=>20
+//     ]
+// ];
+
+// $productManager->saveProducts($products);
+
+// $loadedProducts =$productManager->loadProducts();
+
+// echo "<pre>";
+//     print_r($loadedProducts);
+// echo "</pre>";
+
+
+
+
+<?php
+
+class ApiClient
+{
+
+    private $baseUrl;
+    
+    public function __construct($baseUrl)
     {
-        $this->filePath =$filePath;
+        $this->baseUrl=$baseUrl;
     }
 
-    public function saveProducts(array $products) {
-        $jsonData=json_encode($products,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    public function get($endpoint)
+    {
 
-        // echo "<pre>";
-        // print_r($jsonData);
-        //    echo "</pre>";
+        $url=$this->baseUrl . $endpoint;
 
-        if (json_last_error()===JSON_ERROR_NONE) {
-            file_put_contents($this->filePath,$jsonData);
-            echo "Mehsullar ugurla saxlanildi\n";
-        }else{
-            echo "JSON xeta :" .json_last_error_msg() . "\n";
-        }
-    }
+        // echo $url;
+        $ch=curl_init($url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 
-    public function loadProducts() {
-        if (!file_exists($this->filePath)) {
-            echo "Fayl movcud deyil";
-            return [];
-        }
+        $response =curl_exec($ch);
 
-        $jsonData=file_get_contents($this->filePath);
-        $products=json_decode($jsonData,true);
+        curl_close($ch);
 
-        if(json_last_error()==JSON_ERROR_NONE) {
-            return $products;
-        } else {
-            echo "Json xeta mesaji:" . json_last_error() . "\n";
-            return[];
-        }
+        return json_decode($response,true);
     }
 }
 
-$productManager = new ProductManager('products.json');
+$apiClient = new ApiClient('https://v6.exchangerate-api.com/v6/351b53f51aec151c3a55019c/latest/');
 
-$products = [
-    [
-        'id'=>1,
-        'name'=>'Telefon',
-        'price'=>1000,
-        'stock'=>50
+$data=$apiClient->get("USD");
 
-    ],
+// echo "<pre>";
+// print_r($data->conversion_rates->AZN);
+// echo "</pre>";
 
-    [
-        'id'=>2,
-        'name'=>'Laptop',
-        'price'=>2000,
-        'stock'=>20
-    ]
-];
-
-$productManager->saveProducts($products);
-
-$loadedProducts =$productManager->loadProducts();
-
-echo "<pre>";
-    print_r($loadedProducts);
-echo "</pre>";
+echo "1 USD - > EUR " .$data->conversion_rates->EUR . "<br>";
